@@ -1,14 +1,15 @@
 
 const knex = require('knex')({
-    client: 'pg',
+
     connection: {
-        host: "localhost",
-        port: 1302,
-        user: "postgres",
-        password: "1302",
-        database: "marketplace",
-
+        host: process.env.DB_HOST,
+        port: process.env.DB_PORT,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_DATABASE
+    },
+    ssl: {
+        rejectUnathorized: false
     }
-
 });
 module.exports = knex
