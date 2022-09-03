@@ -1,11 +1,12 @@
 const express = require('express')
+const router = express()
 const cadastrarProduto = require('./controlers/produtos/cadastrarProduto')
 const { deletarProdutos } = require('./controlers/produtos/deleteProduct')
 const { listarProdutos } = require('./controlers/produtos/listarProdutos')
 const { listarProdutosId } = require('./controlers/produtos/listarProdutosId')
 const { listarProdutosUser } = require('./controlers/produtos/listarProdutosUser')
 const { updateProdutos } = require('./controlers/produtos/updateProdutos')
-const router = express()
+
 const { cadastrarUsuario } = require('./controlers/usuarios/cadastro')
 const { Login } = require('./controlers/usuarios/login')
 const obterPerfil = require('./controlers/usuarios/obterPerfil')
