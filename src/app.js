@@ -1,9 +1,9 @@
 require('dotenv').config()
 const express = require('express')
-const app = express()
 const router = require('./router')
 const cors = require('cors')
 
+const app = express()
 app.use(express.json({
     limit: '5mb'
 }))
