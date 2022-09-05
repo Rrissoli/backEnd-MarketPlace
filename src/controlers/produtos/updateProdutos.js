@@ -20,7 +20,7 @@ const updateProdutos = async (req, res) => {
         const bufer = Buffer.from(imagem, 'base64')
 
 
-        const categoria_id = await knex('categoria').where({ nome: categoria })
+        const categoria_id = await knex('categoria').where({ nome: categoria }).first()
 
         const codeImagem = `${new Date().getTime()}`;
 
@@ -46,7 +46,7 @@ const updateProdutos = async (req, res) => {
             estoque,
             preco,
             usuario_id: usuario.id,
-            categoria: categoria_id[0].id,
+            categoria: categoria_id.id,
             descricao,
             nome_imagem: codeImagem,
             imagem: publicURL
