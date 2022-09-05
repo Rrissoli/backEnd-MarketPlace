@@ -3,7 +3,7 @@ const { all } = require("../../router")
 
 const listarProdutos = async (req, res) => {
     try {
-        const allProducts = await knex('produtos').select('*')
+        const allProducts = await knex('produtos')
         return res.status(200).json(allProducts)
     } catch (error) {
         return res.status(500).json(error.message)
