@@ -27,7 +27,7 @@ router.get('/produtos/:id', listarProdutosId)
 router.use(verificaLogin)
 //update produto por id 
 router.put('/updateProduto/:id', updateProdutos)
-// update do usuario
+
 router.post('/obterPerfil', obterPerfil)
 router.post('/updateUser', updatePerfil)
 
