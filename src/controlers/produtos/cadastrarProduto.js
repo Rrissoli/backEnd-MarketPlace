@@ -51,7 +51,7 @@ const cadastrarProduto = async (req, res) => {
             nome,
             estoque,
             preco: precoFormatado,
-            usuario_id: usuario.id,
+            usuario_id: usuario_id,
             categoria: categoria_id.id,
             descricao,
             nome_imagem: codeImagem,
